@@ -4,7 +4,7 @@
 
 
 #### promise有哪些api ?
-.then() .catch()  .all()  .race() .resolce() .reject() 
+.then() .catch()  .all()  .race() .resolve() .reject() 
 
 
 

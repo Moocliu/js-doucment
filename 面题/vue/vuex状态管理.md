@@ -1,4 +1,4 @@
-### 3.简单介绍一下 vuex 原理 和 其中的模块
+### 、3.简单介绍一下 vuex 原理 和 其中的模块
 
 #### - 原理：
 
@@ -42,6 +42,4 @@ mapGetter:
 mapMutations:
 mapActions:
 
-## action 和 mutations 区别
-
-#
+ 

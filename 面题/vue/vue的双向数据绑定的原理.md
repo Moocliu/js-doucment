@@ -9,7 +9,9 @@ https://mp.weixin.qq.com/s/jLcz0vZrc-t2D_9vOOB6FA
 
 
 ```
-vue.js 是采用数据劫持结合发布者-订阅者模式的方式，通过 Object.defineProperty()来劫持各个属性的 setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。
+vue.js 是采用数据劫持结合发布者-订阅者模式的方式，通过 Object.defineProperty()来劫持各个属性的 setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。 通过一个订阅者dep类，用于解耦属性的依赖收集和派发欣的更新操作，  通过一个观察这watcher 观察订阅依赖  进行依赖收集
+
+所谓的依赖，其实就是Watcher。至于如何收集依赖，总结起来就一句话，在getter中收集依赖，在setter中触发依赖。先收集依赖，即把用到该数据的地方收集起来，然后等属性发生变化时，把之前收集好的依赖循环触发一遍就行了。
 
 具体步骤：
 

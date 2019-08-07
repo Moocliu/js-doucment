@@ -121,16 +121,47 @@ border-color: transparent transparent blue transparent;
 
 
 
-#### 解决img与文本之间的留白
-
-1. 将img图片**display:block**
-2. 将div的**line-height**设置得足够小，也可以去掉空白，例如div{line-height:5px;}
-3. 将**font-size设为0**，实际上也是改变了line-height；
-4. 改变vertical-align，让它不是baseline，比如设置**vertical-align:middle**。
 
 
+**HTML5有哪些新特性,移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分HTML和HTML5**
+
+新增加了图像、位置、存储、多任务等功能。
+新增元素：
+
+1. canvas
+2. 用于媒介回放的video和audio元素
+3. 本地离线存储。localStorage长期存储数据，浏览器关闭后数据不丢失;sessionStorage的数据在浏览器关闭后自动删除
+4. 语意化更好的内容元素，比如 article footer header nav section
+5. 位置API：Geolocation
+6. 表单控件，calendar date time email url search
+7. 新的技术：web worker(web worker是运行在后台的 JavaScript，独立于其他脚本，不会影响页面的性能。您可以继续做任何愿意做的事情：点击、选取内容等等，而此时 web worker 在后台运行) web socket
+8. 拖放API：drag、drop
+
+**7 常见的浏览器内核有哪些？**
+
+1. Trident( MSHTML )：IE MaxThon TT The World 360 搜狗浏览器   （踹等特）
+2. Geckos：Netscape6及以上版本 FireFox Mozilla Suite/SeaMonkey  （改扣死）
+3. Presto：Opera7及以上(Opera内核原为：Presto，现为：Blink)  （p锐死头）
+4. Webkit：Safari Chrome
 
 
+
+**11 cookies，sessionStorage和localStorage的区别？**
+
+共同点：都是保存在浏览器端，且是同源的。
+
+区别：
+
+1. cookies是为了标识用户身份而存储在用户本地终端上的数据，始终在同源http请求中携带，即cookies在浏览器和服务器间来回传递，而sessionstorage和localstorage不会自动把数据发给服务器，仅在本地保存。
+2. 存储大小的限制不同。cookie保存的数据很小，不能超过4k，而sessionstorage和localstorage保存的数据大，可达到5M。
+3. 数据的有效期不同。cookie在设置的cookie过期时间之前一直有效，即使窗口或者浏览器关闭。sessionstorage仅在浏览器窗口关闭之前有效。localstorage始终有效，窗口和浏览器关闭也一直保存，用作长久数据保存。
+4. 作用域不同。cookie在所有的同源窗口都是共享；sessionstorage不在不同的浏览器共享，即使同一页面；localstorage在所有同源窗口都是共享、、
+
+
+
+IE盒子模型 和标准模型的区别：
+
+**两者的区别在于content的不同，IE盒模型的content包括border、padding**
 
 https://juejin.im/post/5b50a05351882519eb6593ff
 
